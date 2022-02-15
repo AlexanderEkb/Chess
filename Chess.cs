@@ -51,5 +51,17 @@ namespace Chess
       }
       return answer;
     }
+
+    public static int CountOnesFast64(ulong N)
+    {
+      int answer = 0;
+      while (N != 0)
+      {
+        answer++;
+        N &= N - 1;
+      }
+      return answer;
+    }
+
   }
 }
